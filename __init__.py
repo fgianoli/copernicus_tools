@@ -26,6 +26,17 @@ __author__ = 'Federico Gianoli'
 __date__ = '2021-01-02'
 __copyright__ = '(C) 2021 by Federico Gianoli'
 
+import os
+import site
+import sys
+
+sys.path.append(os.path.dirname(__file__))
+
+site.addsitedir(os.path.join(os.path.dirname(__file__),'extlibs'))
+
+if not hasattr(sys, 'argv'):
+    sys.argv  = ['']
+
 
 # noinspection PyPep8Naming
 def classFactory(iface):  # pylint: disable=invalid-name

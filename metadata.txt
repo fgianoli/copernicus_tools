@@ -3,7 +3,7 @@
 # This file should be included when you package your plugin.# Mandatory items:
 
 [general]
-name=Copernicus Global Land Tools
+name=Copernicus Global Land QGIS plugin
 qgisMinimumVersion=3.0
 description=This plugin allows to download Copernicus Global Land products (Land Cover, NDVI, FAPAR, ...). Requires Boto3 library
 version=1.3
