@@ -1,0 +1,48 @@
+# This file contains metadata for your plugin.
+
+# This file should be included when you package your plugin.# Mandatory items:
+
+[general]
+name=Copernicus Global Land Tools
+qgisMinimumVersion=3.0
+description=This plugin allows to download Copernicus Global Land products (Land Cover, NDVI, FAPAR, ...). Requires Boto3 library
+version=1.3
+author=Federico Gianoli
+email=gianoli.federico@gmail.com
+
+about=This plugin allows to download Copernicus Global Land products (Land Cover, NDVI, FAPAR, ...).
+The plugin requires the library Boto3. To install Boto3 library open Osgeo4W Shell and run: py3_env.bat  and than  pip install boto3
+
+tracker=https://github.com/fgianoli/CopernicusGlobalLand/issues
+repository=https://github.com/fgianoli/CopernicusGlobalLand/tree/master/cgl_tools
+# End of mandatory metadata
+
+# Recommended items:
+
+hasProcessingProvider=yes
+# Uncomment the following line and add your changelog:
+changelog= Direct connection with Copernicus S3 Server, Possibility to download the Land Cover within the map extension
+
+# Tags are comma separated with spaces allowed
+tags=Copernicus, Sentinel, ProbaV, Land Cover, Global Land, ndvi, fapar, WAD, Resample
+
+homepage=https://github.com/fgianoli/CopernicusGlobalLand
+category=Analysis
+icon=icon.png
+# experimental flag
+experimental=True
+
+# deprecated flag (applies to the whole plugin, not just a single version)
+deprecated=False
+
+# Since QGIS 3.8, a comma separated list of plugins to be installed
+# (or upgraded) can be specified.
+# Check the documentation for more information.
+# plugin_dependencies=
+
+Category of the plugin: Raster, Vector, Database or Web
+# category=
+
+# If the plugin can run on QGIS Server.
+server=False
+
