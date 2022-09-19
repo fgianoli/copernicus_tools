@@ -1,0 +1,11 @@
+*.pyc
+Makefile
+*.log
+help/
+i18n/
+__pycache__/
+__pycache__/*
+.idea/
+.idea/*
+.DS_Store
+*~

@@ -224,7 +224,7 @@ class Download_copernicus(QgsProcessingAlgorithm):
 
 
     def name(self):
-        return 'Download Copernicus Global Land'
+        return 'downloadcopernicusgloballand'
 
     def displayName(self):
         return 'Copernicus Global Land Products Downloader'

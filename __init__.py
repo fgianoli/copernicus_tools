@@ -47,4 +47,4 @@ def classFactory(iface):  # pylint: disable=invalid-name
     """
     #
     from .CGL_tools import CGL_toolsPlugin
-    return CGL_toolsPlugin()
+    return CGL_toolsPlugin(iface)
