@@ -91,7 +91,6 @@ class Download_copernicus(QgsProcessingAlgorithm):
         self.addParameter(param)
         
         self.addParameter(QgsProcessingParameterFile('Download directory', 'Download directory', behavior=QgsProcessingParameterFile.Folder, optional=True, defaultValue=None))
-        self.addParameter(QgsProcessingParameterRasterDestination('Download file', 'Download file', createByDefault=True, defaultValue=None))
 
     def processAlgorithm(self, parameters, context, model_feedback):
         # Use a multi-step feedback, so that individual child algorithm progress reports are adjusted for the
@@ -218,9 +217,12 @@ class Download_copernicus(QgsProcessingAlgorithm):
         }
         print ("params",alg_params)
         outputs['translate'] = processing.run('gdal:translate', alg_params, context=context, feedback=model_feedback, is_child_algorithm=True)
-        return {'Download file': outputs['translate']['OUTPUT'],  "RESOURCE": target}
-    
-    
+
+        model_feedback.pushInfo("")
+        model_feedback.pushInfo("CLOSE THE DIALOG TO LOAD THE DOWNLOADED RASTER FILE IN THE MAPCANVAS")
+        model_feedback.pushInfo("")
+
+        return {'OUTPUT_FILE': outputs['translate']['OUTPUT'],  "RESOURCE": target}
 
 
     def name(self):

@@ -37,6 +37,8 @@ from qgis.PyQt.QtWidgets import QAction, QFileDialog, QToolButton, QMenu, QLabel
 from qgis.core import (
     Qgis,
     QgsApplication,
+    QgsRasterLayer,
+    QgsProject,
 )
 
 from processing import execAlgorithmDialog, createAlgorithmDialog
@@ -208,7 +210,7 @@ class CGL_toolsPlugin:
         """Create the menu entries and toolbar icons inside the QGIS GUI."""
         self.initProcessing()
 
-        self.main_icon = os.path.join(self.plugin_dir, 'icon.png')
+        self.main_icon = os.path.join(self.plugin_dir, 'cgl.png')
         self.toolButton = QToolButton()
         self.toolButtonMenu = QMenu()
         self.toolButton.setMenu(self.toolButtonMenu)
@@ -220,14 +222,14 @@ class CGL_toolsPlugin:
         sub_actions = [
             {
                 "text":"Readme",
-                "icon_path":os.path.join(self.plugin_dir, 'icon.png'),
-                "callback": lambda x: QDesktopServices.openUrl(QUrl("https://github.com/fgianoli/Copernicus_tool/blob/master/README.md")),
+                "icon_path":'',
+                "callback": lambda x: QDesktopServices.openUrl(QUrl("https://github.com/enricofer/Copernicus_tools/blob/master/README.md")),
                 "parent": self.iface.mainWindow(),
                 "toolbutton": self.toolButton,
             },
             {
                 "text":"Copernicus Global Land Products Downloader",
-                "icon_path":os.path.join(self.plugin_dir, 'icon.png'),
+                "icon_path":os.path.join(self.plugin_dir, 'cgl.png'),
                 "args": ["cgl_provider:downloadcopernicusgloballand", alg_params],
                 "callback": self.run_alg,
                 "parent": self.iface.mainWindow(),
@@ -235,7 +237,7 @@ class CGL_toolsPlugin:
             },
             {
                 "text":"Copernicus Land Cover Download",
-                "icon_path":os.path.join(self.plugin_dir, 'icon.png'),
+                "icon_path":os.path.join(self.plugin_dir, 'cgl2.png'),
                 "args": ["cgl_provider:copernicuslandcover", alg_params],
                 "callback": self.run_alg,
                 "parent": self.iface.mainWindow(),
@@ -265,6 +267,12 @@ class CGL_toolsPlugin:
         except:
             pass
 
+    def load_OUTPUT(self, output_file):
+        filename, ext = os.path.splitext(os.path.basename(output_file))
+        print (filename)
+        outLayer = QgsRasterLayer(output_file,filename,"gdal")
+        print (outLayer)
+        QgsProject.instance().addMapLayer(outLayer)
     
     def open_templates_folder(self):
         templates_folder = os.path.join(self.plugin_dir,"test","templates")
@@ -287,4 +295,6 @@ class CGL_toolsPlugin:
             item.widget().setAlignment(Qt.AlignLeft)
             dialog.close()
         print("results", results)
+        if "OUTPUT_FILE" in results.keys():
+            self.load_OUTPUT(results["OUTPUT_FILE"])
 
