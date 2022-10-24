@@ -35,7 +35,7 @@ sys.path.append(os.path.dirname(__file__))
 site.addsitedir(os.path.join(os.path.dirname(__file__),'extlibs'))
 
 if not hasattr(sys, 'argv'):
-    sys.argv  = ['']
+    sys.argv = ['']
 
 
 # noinspection PyPep8Naming
@@ -45,6 +45,6 @@ def classFactory(iface):  # pylint: disable=invalid-name
     :param iface: A QGIS interface instance.
     :type iface: QgsInterface
     """
-    #
+
     from .CGL_tools import CGL_toolsPlugin
     return CGL_toolsPlugin(iface)
