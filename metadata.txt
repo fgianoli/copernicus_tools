@@ -11,8 +11,7 @@ version=2.0
 author=Federico Gianoli
 email=gianoli.federico@gmail.com
 
-about=This plugin allows to download Copernicus Global Land products (Land Cover, NDVI, FAPAR, ...).
-Requires Pandas library. Usually, this library is installed within QGIS. If your installation doesn't come with Pandas, please install it trough OSGeo4W Installer or via pip.
+about=This plugin allows to download Copernicus Global Land products (Land Cover, NDVI, FAPAR, ...).Requires Pandas library. 
 
 tracker=https://github.com/fgianoli/copernicus_tools/issues
 repository=https://github.com/fgianoli/copernicus_tools
