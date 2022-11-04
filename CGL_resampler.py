@@ -223,7 +223,7 @@ class Copernicus(QgsProcessingAlgorithm):
         should provide a basic description about what the algorithm does and the
         parameters and outputs associated with it..
         """
-        return """This algorithm allows to resample the 333meters Copernicus Products to 1Km preserving the spatial extension of 1Km time series.<br>""" \
+        return """This algorithm allows to resample the 333 meters Copernicus Products to 1Km preserving the spatial extension of 1Km time series.<br>""" \
                """The CGLS vegetation-related products based on PROBA-V observations, have been distributed at 1km and 333m spatial resolution until June, 2020. However, as of July, 2020, all Near Real Time (NRT) production of the vegetation biophysical variables, based on Sentinel-3 observations, are no longer provided at 1km resolution. Nonetheless, users interested in continuing their 1km time series can use a resample of the new 333m products.<br>""" \
                """It is possible to choose the resampling method to use. Possible values: nearest, bilinear,cubic,cubicspline,lanczos,average,mode. According to our tests, for NDVI, FAPAR, LAI, RMSE is better to use the Average.<br> <br>""" \
                """More info <a href="https://github.com/fgianoli/CopernicusGlobalLand">here</a>"""

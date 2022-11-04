@@ -247,7 +247,6 @@ class Download_copernicus(QgsProcessingAlgorithm):
                """This algorithm allows to download Copernicus Global Land products and converts the native Netcdf files into geotiff. <br>""" \
                """ Select the product collection to download and the day. The algorithm will download the product with the closest date. <br> """\
                """Download directory is the directory in which the product will be downloaded and converted to geotiff. """ \
-               """Download file: it is an addionatal parameter, leave it empty <br>"""\
                """ For More info see the Readme file</a>"""
 
     def createInstance(self):

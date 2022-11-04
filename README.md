@@ -1,15 +1,18 @@
 # Copernicus Global Land tools
 
-This plugin allow to download all the Copernicus Land products in an easy way and translate them to geotiff.
+This plugin allows to download all the Copernicus Land products in easy way and translate them to geotiff.
 This tool would like to be like a Swiss knife for the Copernicus Land Products.
 
 <b>To use this tool it is necessary to have a valid account to  <a href="https://land.copernicus.eu">CGL website</a>. </b>
 
+The plugin is built as "processing plugin", it is possible to find all the algorithms in the Processing Toolbox inside the "CGL_Provider".
+The two most used tools, the Copernicus Global Land Products Downloader and the Land Cover Downloader, are also available in the QGIS ToolBar.
 
+To find more details and technical documentation about Copernicus Land Products, please visit the [website](https://land.copernicus.eu/)
 
-## How to use the Downloader
+## How to use the Copernicus Global Land Downloader
 
-This algorithm allows to download Copernicus Global Land products and converts the native Netcdf files into geotiff. 
+This algorithm allows download Copernicus Global Land products and converts the native Netcdf files into geotiff. 
 Select the product collection to download and the day. The algorithm will download the product with the closest date. 
 Download directory is the directory in which the product will be downloaded and converted to geotiff.
 
@@ -17,11 +20,15 @@ This tool allows users to connect to the manifest of CGL products and to choose 
 To use this tool it is necessary to have a valid account to CGL (https://land.copernicus.eu/) website.
 - Select the product collection to download and the day. The algorithm will download the product with the closest date.  
 - Download directory is the directory in which the product will be downloaded and converted to geotiff.  
-- Download file: this is an additional parameter used by the tool, **leave it empty**.
 
 ![Downloader](https://github.com/fgianoli/CopernicusGlobalLand/blob/master/img/doc/downloader.JPG?raw=true)
 
 In order to works this tool requires Pandas library. Usually, this library is installed within QGIS. If your installation doesn't come with Pandas, please install it trough OSGeo4W Installer or via pip. 
+
+## How to use the Copernicus Global Land Downloader
+
+The tool permit to download the Land Cover tiles from [Copernicus Land Services](https://land.copernicus.eu/global/products/lc).
+
 
 ## CGL Resampler Tool
 
