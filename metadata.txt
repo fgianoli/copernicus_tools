@@ -5,28 +5,29 @@
 [general]
 name=Copernicus Global Land QGIS plugin
 qgisMinimumVersion=3.16
-description=This plugin allows to download Copernicus Global Land products (Land Cover, NDVI, FAPAR, ...). Requires Boto3 library
+description=This plugin allows to download Copernicus Global Land products (Land Cover, NDVI, FAPAR, ...). Requires Pandas library.
+
 version=2.0
 author=Federico Gianoli
 email=gianoli.federico@gmail.com
 
 about=This plugin allows to download Copernicus Global Land products (Land Cover, NDVI, FAPAR, ...).
-The plugin requires the library Boto3. To install Boto3 library open Osgeo4W Shell and run: py3_env.bat  and than  pip install boto3
+Requires Pandas library. Usually, this library is installed within QGIS. If your installation doesn't come with Pandas, please install it trough OSGeo4W Installer or via pip.
 
-tracker=https://github.com/fgianoli/Copernicus_tools/issues
-repository=https://github.com/fgianoli/Copernicus_tools/tree/master/cgl_tools
+tracker=https://github.com/fgianoli/copernicus_tools/issues
+repository=https://github.com/fgianoli/copernicus_tools
 # End of mandatory metadata
 
 # Recommended items:
 
 hasProcessingProvider=yes
 # Uncomment the following line and add your changelog:
-changelog= Direct connection with Copernicus S3 Server, Possibility to download the Land Cover within the map extension
+changelog= Version 2.0: added external libraries to connect to S3 Storage, Now Toolbar menu
 
 # Tags are comma separated with spaces allowed
-tags=Copernicus, Sentinel, ProbaV, Land Cover, Global Land, ndvi, fapar, WAD, Resample
+tags=Copernicus, Sentinel, ProbaV, Land Cover, Global Land, ndvi, fapar, WAD, Resample, DMP, NPP
 
-homepage=https://github.com/fgianoli/Copernicus_tools
+homepage=https://github.com/fgianoli/copernicus_tools
 category=Analysis
 icon=cgl.png
 # experimental flag
