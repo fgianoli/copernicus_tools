@@ -243,7 +243,7 @@ class Download_copernicus(QgsProcessingAlgorithm):
         should provide a basic description about what the algorithm does and the
         parameters and outputs associated with it..
         """
-        return """ <b>To use this tool it is necessary to have a valid account to  <a href="https://land.copernicus.eu">CGL website</a>. </b> <br> <br>"""\
+        return """ <b>To use this tool it is necessary to have a valid account to  <a href="https://land.copernicus.vgt.vito.be/PDF/portal/Application.html#Browse;Root=512260;Collection=1000062;Time=NORMAL,NORMAL,-1,,,-1">CGL website</a>. </b> <br> <br>"""\
                """This algorithm allows to download Copernicus Global Land products and converts the native Netcdf files into geotiff. <br>""" \
                """ Select the product collection to download and the day. The algorithm will download the product with the closest date. <br> """\
                """Download directory is the directory in which the product will be downloaded and converted to geotiff. """ \

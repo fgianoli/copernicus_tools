@@ -3,7 +3,7 @@
 This plugin allows to download all the Copernicus Land products in easy way and translate them to geotiff.
 This tool would like to be like a Swiss knife for the Copernicus Land Products.
 
-<b>To use this tool it is necessary to have a valid account to  <a href="https://land.copernicus.eu">CGL website</a>. </b>
+<b>To use this tool it is necessary to have a valid account to  <a href="https://land.copernicus.vgt.vito.be/PDF/portal/Application.html#Browse;Root=512260;Collection=1000062;Time=NORMAL,NORMAL,-1,,,-1">CGL website</a>. </b>
 
 The plugin is built as "processing plugin", it is possible to find all the algorithms in the Processing Toolbox inside the "CGL_Provider".
 The two most used tools, the Copernicus Global Land Products Downloader and the Land Cover Downloader, are also available in the QGIS ToolBar.
